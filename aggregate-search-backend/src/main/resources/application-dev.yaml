@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: aggregate-search-backend
+  # TODO 修改开发环境数据源
+  datasource:
+    url: jdbc:postgresql://localhost:5432/aggregate-search-dev
+    driver-class-name: org.postgresql.Driver
+    username:
+    password:
+  # TODO 修改开发环境es配置
+  elasticsearch:
+    uris:
+    username:
+    password:
+server:
+  port: 8080
+  servlet:
+    context-path: /api
