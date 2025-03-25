@@ -22,7 +22,7 @@ public class SearchServiceAdapter implements SearchService {
         searchServices.forEach(searchService -> {
             SearchAdapter annotation = searchService.getClass().getAnnotation(SearchAdapter.class);
             if (annotation != null) {
-                searchServicesMap.put("", searchService);
+                searchServicesMap.put(annotation.value(), searchService);
             }
         });
     }
