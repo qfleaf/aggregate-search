@@ -32,7 +32,7 @@ public class ArticleSyncService {
             return;
         }
         log.info("Sync started...");
-        List<Article> data = articleRepository.findByUpdatedTimeAfter(lastSyncTime);
+        List<Article> data = articleRepository.findByUpdatedTimeAfter(lastSyncTime.minusMinutes(1));
         if (data.isEmpty()) {
             log.info("No new data found.");
             return;

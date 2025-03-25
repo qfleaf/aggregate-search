@@ -32,7 +32,7 @@ public class QASyncService {
             return;
         }
         log.info("Sync started...");
-        List<QA> data = qaRepository.findByUpdatedTimeAfter(lastSyncTime);
+        List<QA> data = qaRepository.findByUpdatedTimeAfter(lastSyncTime.minusMinutes(1));
         if (data.isEmpty()) {
             log.info("No new data found.");
             return;
