@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import SearchBox from "./components/SearchBox.vue"
+import { RouterView } from "vue-router";
+import GlobalFooter from "./components/GlobalFooter.vue";
 </script>
 
 <template>
   <div>
-    <SearchBox />
+    <RouterView />
   </div>
+  <GlobalFooter />
 </template>
 
 <style scoped>
-
 </style>
