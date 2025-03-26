@@ -18,6 +18,8 @@ declare module 'vue' {
     ArticlePageList: typeof import('./src/components/ArticlePageList.vue')['default']
     GlobalFooter: typeof import('./src/components/GlobalFooter.vue')['default']
     PageList: typeof import('./src/components/PageList.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     SearchBox: typeof import('./src/components/SearchBox.vue')['default']
   }
 }
