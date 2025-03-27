@@ -19,6 +19,7 @@ declare module 'vue' {
     ArticlePageList: typeof import('./src/components/ArticlePageList.vue')['default']
     ATag: typeof import('ant-design-vue/es')['Tag']
     GlobalFooter: typeof import('./src/components/GlobalFooter.vue')['default']
+    MainPageList: typeof import('./src/components/MainPageList.vue')['default']
     PageList: typeof import('./src/components/PageList.vue')['default']
     QAPageList: typeof import('./src/components/QAPageList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
