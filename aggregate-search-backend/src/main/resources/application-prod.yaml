@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: aggregate-search-backend
+  # TODO 修改生产环境数据源配置
+  datasource:
+    url:
+    driver-class-name: org.postgresql.Driver
+    username:
+    password:
+  # TODO 修改生产环境es配置
+  elasticsearch:
+    uris:
+    username:
+    password:
+  # TODO 修改生产环境服务端配置
+server:
+  port: 8080
+  servlet:
+    context-path: /api
