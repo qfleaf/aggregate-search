@@ -8,6 +8,7 @@ import com.qfleaf.aggregatesearch.model.SearchRequest;
 import com.qfleaf.aggregatesearch.utils.ResultUtil;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,6 +27,9 @@ public class SearchController {
 
     @GetMapping
     public CommonResponse<PageData> search(SearchRequest searchRequest) {
+        if (!StringUtils.hasLength(searchRequest.getKeyword())) {
+            searchRequest.setKeyword(null);
+        }
         log.debug("params: {}", searchRequest);
         return ResultUtil.success(ResponseCode.SUCCESS, searchServiceAdapter.search(searchRequest));
     }
