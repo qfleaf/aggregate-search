@@ -3,6 +3,7 @@ import { ref, onBeforeMount, onMounted, onUpdated } from "vue";
 import ArticlePageList from "../components/ArticlePageList.vue";
 import QAPageList from "../components/QAPageList.vue";
 import SearchBox from "../components/SearchBox.vue";
+import MainPageList from "../components/MainPageList.vue";
 import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
@@ -13,7 +14,9 @@ const listComponentRef = ref();
 
 // 获取要渲染的列表组件
 const getListComponentByCategory = (category: string | undefined) => {
-  if (category === 'article') {
+  if (category === 'main') {
+    return MainPageList;
+  } else if (category === 'article') {
     return ArticlePageList;
   } else if (category === 'qa') {
     return QAPageList;
